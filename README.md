@@ -6,5 +6,5 @@ to the next node of the tree, till a leaf is reached. Once a leaf is reached, a
 response is returned, which is the food type the user should have for dinner.
 
 ## Developers:
-Austin Howard
-Jacob Leonhardt
+- [Austin Howard](https://github.com/Austin-from-TX)
+- [Jacob Leonhardt](https://github.com/jacobleonhardt)
