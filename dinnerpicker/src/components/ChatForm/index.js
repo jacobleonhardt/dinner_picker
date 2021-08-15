@@ -2,9 +2,17 @@ import React from 'react';
 
 export default function ChatForm(){
 
+    const handlingSubmit = (e) => {
+        e.preventDefault()
+
+    }
+
     return(
         <div>
-            <input required placeholder='Enter yes/no here'></input>
+            <form onSubmit={handlingSubmit}>
+                <button type="submit">{answer.a}</button>
+                <button type="submit">{answer.b}</button>
+            </form>
         </div>
     )
 }
