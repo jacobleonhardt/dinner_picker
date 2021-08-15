@@ -1,11 +1,14 @@
 import React from "react";
 
-export default function ChatBubble(){
+export default function ChatBubble({ responses }){
+
+    console.log('%%%%%%%%%%%%%%%%', responses)
 
     return(
         <>
             <div>
-                <h3>This is a chat bubble.  Insert text here. </h3>
+                <p>HELLLO!</p>
+                { responses }
             </div>
         </>
     )

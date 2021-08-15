@@ -1,7 +1,7 @@
 const { Question, Result } = require('./classes')
 
 // Tree Structure
-let a = new Question('Coffee or Tea?')
+let a = new Question('Do you prefer Coffee or Tea?')
 let b = new Question('Savory or Sweet?')
 let c = new Question('Spices?')
 let d = new Result('American')
@@ -17,7 +17,7 @@ c.yes = 'f'
 c.no = 'g'
 
 const dinnerPicker = async (node = a, userInput) => {
-    if (node.type === 'result') {
+    if (node instanceof Result) {
         return node.result
     }
 
