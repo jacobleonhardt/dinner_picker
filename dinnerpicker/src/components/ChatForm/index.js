@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ChatBubble from '../ChatBubble';
 
+
 export default function ChatForm({ question, setQuestion, setUserResponse }){
 
     const [answered, setAnswered] = useState(false)
@@ -21,7 +22,7 @@ export default function ChatForm({ question, setQuestion, setUserResponse }){
     // }, [userResponses])
 
     return(
-        <>
+        
             <div className="block flex-row max-w-md justify-center text-center m-1">
                 <form>
                     <div className="block text-left bg-blue-200 p-1">
@@ -36,6 +37,6 @@ export default function ChatForm({ question, setQuestion, setUserResponse }){
                     </div>}
                 </form>
             </div>
-        </>
+    
     )
 }
