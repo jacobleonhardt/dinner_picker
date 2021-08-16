@@ -2,14 +2,9 @@ import React from "react";
 
 export default function ChatBubble({ responses }){
 
-    console.log('%%%%%%%%%%%%%%%%', responses)
-
     return(
-        <>
-            <div>
-                <p>HELLLO!</p>
-                { responses }
-            </div>
-        </>
+        <div className="block bg-green-300 text-right m-1">
+            <p className="p-1">User:<br/>{ responses }</p>
+        </div>
     )
 }
