@@ -7,8 +7,7 @@ export default function ChatBubble({ responses }){
     return(
         <>
             <div>
-                <p>HELLLO!</p>
-                { responses }
+                <p>{ responses }</p>
             </div>
         </>
     )

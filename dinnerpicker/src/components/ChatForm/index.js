@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ChatBubble from '../ChatBubble';
 
-export default function ChatForm({ question, setQuestion2 }){
-
-    const userResponses = []
-    let toggle = false
+export default function ChatForm({ question, setQuestion, setUserResponse }){
 
     const handlingSubmit = (e, value) => {
         e.preventDefault()
-        console.log('##########', userResponses)
-        userResponses.push(value)
-        console.log('@@@@@@@@@', userResponses)
-        toggle = true
-        setQuestion2(true)
-        return userResponses
+        // console.log('##########', userResponses)
+        // userResponses.push(value)
+        setUserResponse(value)
+        // console.log('@@@@@@@@@', userResponses)
+        setQuestion(true)
+        return
     }
 
     // useEffect(() => {
