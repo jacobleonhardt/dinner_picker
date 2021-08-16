@@ -1,9 +1,9 @@
 class Node {
-    constructor(value, parent, left, right) {
+    constructor(value, parent) {
         this.value = value
         this.parent = parent
-        this.left = left
-        this.right = right
+        this.left = null
+        this.right = null
     }
 }
 
