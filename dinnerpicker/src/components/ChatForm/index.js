@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ChatBubble from '../ChatBubble';
-
 
 export default function ChatForm({ question, setQuestion, setUserResponse }){
 
@@ -8,21 +6,14 @@ export default function ChatForm({ question, setQuestion, setUserResponse }){
 
     const handlingSubmit = (e, value) => {
         e.preventDefault()
-        // console.log('##########', userResponses)
-        // userResponses.push(value)
         setUserResponse(value)
-        // console.log('@@@@@@@@@', userResponses)
         setQuestion(true)
         setAnswered(true)
         return
     }
 
-    // useEffect(() => {
-    //     setToggle(false)
-    // }, [userResponses])
-
     return(
-        
+
             <div className="block flex-row max-w-md justify-center text-center m-1">
                 <form>
                     <div className="block text-left bg-blue-200 p-1">
@@ -37,6 +28,6 @@ export default function ChatForm({ question, setQuestion, setUserResponse }){
                     </div>}
                 </form>
             </div>
-    
+
     )
 }
