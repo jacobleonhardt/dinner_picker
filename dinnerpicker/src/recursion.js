@@ -1,32 +1,37 @@
-const { Question, Result } = require('./classes')
+const { Node } = require('./classes')
 
 // Tree Structure
-let a = new Question('Do you prefer Coffee or Tea?')
-let b = new Question('Savory or Sweet?')
-let c = new Question('Spices?')
-let d = new Result('American')
-let e = new Result('Italian')
-let f = new Result('Mexican')
-let g = new Result('Chinese')
+let root = new Node('root', null, 'Coffee', 'Tea')
+let coffee = new Node('Coffee', 'root', 'Sweet', 'Savory')
+let tea = new Node('Tea', 'root', 'Sweet', 'Savory')
+let sweetCoffee = new Node('Sweet', 'Coffee', 'American', null)
+let savoryCoffee = new Node('Savory', 'Coffee', 'Italian', null)
+let sweetTea = new Node('Sweet', 'Tea', 'Chinese', null)
+let savoryTea = new Node('Savory', 'Tea', 'Mexican', null)
 
-a.yes = 'b'
-a.no = 'c'
-b.yes = 'd'
-b.no = 'e'
-c.yes = 'f'
-c.no = 'g'
 
-const dinnerPicker = async (node = a, userInput) => {
-    if (node instanceof Result) {
-        return node.result
+// a.yes = 'b'
+// a.no = 'c'
+// b.yes = 'd'
+// b.no = 'e'
+// c.yes = 'f'
+// c.no = 'g'
+
+export const fetchResult = (input1, input2, node = root) => {
+    if (node.right === null) return node.left
+
+    let result;
+
+    if (node.parent === null && node.left === input1) {
+       result = fetchResult(input1, input2, node.left)
     }
-
-    if (userInput === 'yes') {
-        // if yes, we need to display the question to the left
-        // of the current node and recurse, but we need the user input
+    else if (node.parent === null && node.right === input1) {
+      result = fetchResult(input1, input2, node.right)
     }
-}
+    else if (node.right === input2) {
+        result = fetchResult(input1, input2, node.right)
+    }
+    else result = fetchResult(input1, input2, node.left)
 
-export const fetchResult = (input1, input2) => {
-    
+    return result
 }
