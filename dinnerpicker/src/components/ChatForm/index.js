@@ -25,6 +25,7 @@ export default function ChatForm({ question, setQuestion, setUserResponse }){
             <div className="block flex-row max-w-md justify-center text-center m-1">
                 <form>
                     <div className="block text-left bg-blue-200 p-1">
+                        <p>DinnerPicker:</p>
                         <label>{question.label}</label>
                     </div>
                      { answered ? <></> : <div className="block text-right">
