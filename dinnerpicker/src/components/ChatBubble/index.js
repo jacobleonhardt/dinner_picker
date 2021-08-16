@@ -6,8 +6,8 @@ export default function ChatBubble({ responses }){
 
     return(
         <>
-            <div>
-                <p>{ responses }</p>
+            <div className="block">
+                <p className="bg-green-600">{ responses }</p>
             </div>
         </>
     )
