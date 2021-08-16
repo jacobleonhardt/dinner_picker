@@ -5,10 +5,8 @@ export default function ChatBubble({ responses }){
     console.log('%%%%%%%%%%%%%%%%', responses)
 
     return(
-        <>
-            <div className="block">
-                <p className="bg-green-600">{ responses }</p>
-            </div>
-        </>
+        <div className="block bg-green-300 text-right">
+            <p className="">{ responses }</p>
+        </div>
     )
 }
