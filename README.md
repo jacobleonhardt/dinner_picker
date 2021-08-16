@@ -10,6 +10,6 @@ response is returned, which is the food type the user should have for dinner.
 - React
 - Tailwind CSS
 
-## Developers:
+## Developers
 - [Austin Howard](https://github.com/Austin-from-TX)
 - [Jacob Leonhardt](https://github.com/jacobleonhardt)
