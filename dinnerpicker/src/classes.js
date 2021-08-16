@@ -1,20 +1,14 @@
-class Question {
-    constructor(question) {
-        this.question = question
-        this.yes = null
-        this.no = null
+class Node {
+    constructor(value, parent, left, right) {
+        this.value = value
+        this.parent = parent
+        this.left = left
+        this.right = right
     }
 }
 
-class Result {
-    constructor(result) {
-        this.result = result
-        this.yes = null
-        this.no = null
-    }
-}
+
 
 module.exports = {
-    Question,
-    Result
+    Node
 }
